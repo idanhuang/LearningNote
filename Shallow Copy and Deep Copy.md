@@ -1,7 +1,7 @@
 # Shallow Copy and Deep Copy
 
 ## Introduction
-In object-oriented programming, object copying is creating a copy of an existing object. The result object is called object copy or simply copy. There are two main copy methods: Shallow Copy and Deep Copy.
+In object-oriented programming, object copying is creating a copy of an existing object. The result object is called object copy. There are two main copy methods: Shallow Copy and Deep Copy.
 
 ## Value type and Reference type
 A value-type variable contains an instance of the type. In C# value types include:
@@ -103,13 +103,18 @@ public class Solution
 }
 ```
 ## Shallow Copy
-Shallow copy is a field by field copy. If the field is value type, then shallow copy copies the value. If the field is reference type, then shallow copy copies the reference instead of copying the object that the reference points to. So the original object and copied object are not 100% disjoint, which means any changes made to the copied object will be reflected in the original object and vice versa.
+Shallow copy is a field by field copy. 
+- If the field is value type, then shallow copy copies the value. 
+- If the field is reference type, then shallow copy copies the reference. So the source object and object copy refer to the same memory. Later modification to the content of either will instanly reflected in both source object and object copy.
 
 ![Shallow Copy](img/ShallowCopy.PNG)
 
 
 ## Deep Copy
-Deep Copy is a process of creating a new object and then copying the fields of the source object to the object copy. If the field is a value type, then deep copy copies the value. If the field is a reference type, then the copy will have different memory.
+Fields are dereferenced in deep copy. Rather than references to objects being copied, new copy objects are created for any referenced object.
+
+- If the field is a value type, then deep copy copies the value. 
+- If the field is a reference type, new copy objects are created. So the source object and object copy will refer to different memory. So modification to the content of either won't impact the other.
 
 ![Deep Copy](img/DeepCopy.PNG)
 
