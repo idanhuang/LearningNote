@@ -107,7 +107,7 @@ Shallow copy is a field by field copy.
 - If the field is value type, then shallow copy copies the value. 
 - If the field is reference type, then shallow copy copies the reference. So the source object and object copy refer to the same memory. Later modification to the content of either will instanly reflected in both source object and object copy.
 
-![Shallow Copy](img/ShallowCopy.PNG)
+![image](https://user-images.githubusercontent.com/5170584/132998805-1e392925-46e9-483e-a2c8-246ab6125747.png)
 
 
 ## Deep Copy
@@ -116,7 +116,7 @@ Fields are dereferenced in deep copy. Rather than references to objects being co
 - If the field is a value type, then deep copy copies the value. 
 - If the field is a reference type, new copy objects are created. So the source object and object copy will refer to different memory. So modification to the content of either won't impact the other.
 
-![Deep Copy](img/DeepCopy.PNG)
+![image](https://user-images.githubusercontent.com/5170584/132998815-e40e6e58-4542-4c31-8f9a-6ca760d646ef.png)
 
 ## Example
 ```C#
